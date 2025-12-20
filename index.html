@@ -8,6 +8,35 @@
 <title>Prime Creative Group</title>
 <style>
 
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.from-right {
+  transform: translateX(60px);
+}
+
+.from-left {
+  transform: translateX(-60px);
+}
+
+.scale {
+  transform: scale(0.92);
+}
+
+img.animate,
+video.animate {
+  border-radius: 14px;
+}
+
+
     :root{--accent:#0b5b8a;--muted:#666}
     *{box-sizing:border-box}
     body{font-family:system-ui,Arial,sans-serif;margin:0;color:#111;background:#fff}
@@ -206,8 +235,11 @@ section, .card, header, footer, .container{
 <main class="container">
 <section class="hero" id="home">
 <div class="hero-inner">
-<h1>خبرة في صناعة المحتوى والحلول الإبداعية المتكاملة</h1>
-<a class="cta" href="#contact">خلّينا نشتغل على براندك</a>
+<h1 class="animate from-right">
+خبرة في صناعة المحتوى والحلول الإبداعية المتكاملة
+</h1>
+  <a class="cta animate from-left" href="#contact">
+خلّينا نشتغل على براندك</a>
 </div>
 </section>
 <section id="services" style="margin-top:18px">
